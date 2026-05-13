@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* typeB-1column css */
+/* リセットCSSでボーダーボックスの設定をしています。 */
+
+/* html
+------------------------------*/
+html {
+  font-size: 62.5%;
+  /*HTMLのデフォルトのフォントサイズ16pxを10pxに変更（基準）*/
+  /* 以降 1rem=10px  1.6rem=16px */
+}
+
+/* body
+------------------------------*/
+body {
+  background-color: #ccc;
+}
+
+/* wrapper
+------------------------------*/
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  /* 画面幅1920pxまでは横幅100％表示、1920px(主流モニターサイズFull-HD)以上には広がらず、余った間隔を左右均等につけて.wrapperを中央に配置 */
+  background-color: #fff;
+}
+
+/* header
+------------------------------*/
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  /* 白(不透明度90％) */
+  position: sticky;
+  /* スクロールしてもheaderが固定 */
+  top: 0;
+  /* 固定の位置(ブラウザの一番上) */
+  z-index: 9999;
+  /* 固定したheaderを最前面に */
+  display: flex;
+  /* この要素の中の直接の子要素(※widthを設定する必要あり)を横並び */
+  justify-content: space-between;
+  /* 直接の子要素の横方向の並び方：左右両端揃え均等配置 */
+  align-items: center;
+  /* 直接の子要素の縦方向の並び方：中央揃え */
+
+}
+
+header h1 {
+  width: 50%;
+  /* 親要素headerの横幅の50％の横幅 */
+  padding-left: 30px;
+  font-size: 4.8rem;
+}
+
+h1 a {
+  color: #333;
+}
+
+/* nav
+------------------------------*/
+nav {
+  width: 50%;
+  /* 親要素headerの横幅の50％の横幅 */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  width: calc(100% / 5);
+  /* 親要素ulの横幅100%に対しliの数で割るとそれぞれのliが均等の横幅になる */
+}
+
+nav ul li a {
+  display: block;
+  /* マウスホバーできる範囲を文字だけでなく、背景部分にも適応させるためにブロックレベル要素に変更 */
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  /* ブロックレベル化したaのボックスの中の文字を中央揃え */
+  transition-duration: 0.5s;
+  /* ↓ホバーした時のスタイルに0.5秒かけて変化 */
+}
+
+nav ul li a:hover {
+  color: #999;
+}
+
+/* main-visual
+------------------------------*/
+.main-visual img {
+  width: 100%;
+  /* 囲んでいる親要素と同じ幅 */
+  height: auto;
+  /* 縦横比を保ったまま横幅に合わせる */
+}
+
+
+/* section全体
+------------------------------*/
+section {
+  padding: 10%;
+}
+
+h2 {
+  font-size: 4.8rem;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* section05
+------------------------------*/
+.sec_05_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  margin-bottom: 5%;
+  border-radius: 6px;
+  background-color: #ccc;
+}
+
+.sec_05_item:last-child {
+  margin-bottom: 0;
+}
+
+.sec_05_item h3 {
+  width: 60px;
+  writing-mode: vertical-lr;
+  white-space: nowrap
+}
+
+.sec_05_item h3 span.heading_sub {
+  display: inline-block;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  line-height: 65px;
+  border-radius: 100vh;
+  margin-bottom: 2%;
+  writing-mode: horizontal-tb;
+  background-color: #333;
+  color: #fff;
+}
+
+.sec_05_item figure {
+  width: 20%;
+  align-self: center;
+}
+
+.sec_05_item figure img {
+  width: 100%;
+  height: auto;
+}
+
+.sec_05_item p {
+  width: 60%;
+}
+
+/* section06
+------------------------------*/
+section.sec_06 {
+  background-color: #eee;
+}
+
+div.sec_06_container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 3% 0;
+  border-radius: 6px;
+}
+
+.sec_06_item {
+  width: calc(100% / 4);
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+
+.sec_06_item:last-child {
+  border-right: none;
+}
+
+.sec_06_item img {
+  width: 30%;
+  height: auto;
+  margin-bottom: 5%;
+}
+
+.sec_06_item figcaption {
+  font-size: 1.6rem;
+
+}
+
+/* section07
+------------------------------*/
+.sec_07_container {
+  display: flex;
+}
+
+.sec_07_text {
+  width: 50%;
+  margin-right: 2%;
+  background-color: #ccc;
+  padding: 2%;
+  border-radius: 6px;
+}
+.main-img {
+    width: 100%;        /* 横幅はいっぱいまで広げる */
+    height: 650px;      /* ★右側の全体の高さと同じ数値を指定 */
+    object-fit: cover;  /* ★これが重要！画像を歪ませずに枠いっぱいに収めます */
+    border-radius: 10px; /* 角を丸くすると柔らかい印象になります */
+}
+
+.sec_07_text h3 {
+  padding-bottom: 10%;
+}
+
+.sec_07_image {
+  width: 50%;
+  margin-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.sec_07_image img {
+  width: 30%;
+  height: auto;
+  padding-bottom: 3%;
+  filter:brightness(50%);
+  transition-duration: 0.4s;
+}
+
+.sec_07_image img:hover {
+  filter:brightness(100%)
+}
+
+/* footer
+------------------------------*/
+footer {
+  background-color: #777;
+
+  color: #fff;
+}
+
+.ft_content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+}
+
+footer h2 {
+  text-align: left;
+  width: 50%;
+  margin-bottom: 0;
+}
+
+footer .ft_list_wrap {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ft_list_wrap ul {
+  width: fit-content;
+  /* 横幅を内容物ぴったりに合わせる */
+}
+
+.ft_list_wrap ul li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.ft_list_wrap ul li a {
+  display: block;
+  font-size: 1.6rem;
+  transition-duration: 0.5s;
+}
+
+.ft_list_wrap ul li a:hover {
+  color: #111;
+}
+
+small {
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 2%;
+}
