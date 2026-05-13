@@ -243,7 +243,6 @@ p.end {
 }
 
 .sec_07_image img {
-  width: 48%;
   height: 245px;
   object-fit: cover;
   padding-bottom: 3%;
