@@ -219,7 +219,7 @@ div.sec_06_container {
 }
 main-img {
     float: left; 
-    width: 100%;        /* 横幅はいっぱいまで広げる */
+    width: 50%;        /* 横幅はいっぱいまで広げる */
     height: 650px;      /* ★右側の全体の高さと同じ数値を指定 */
     margin-left: 10px;
     object-fit: cover;  /* ★これが重要！画像を歪ませずに枠いっぱいに収めます */
