@@ -217,13 +217,17 @@ div.sec_06_container {
   padding: 2%;
   border-radius: 6px;
 }
-.main-img {
+main-img {
+    float: left; 
     width: 100%;        /* 横幅はいっぱいまで広げる */
     height: 650px;      /* ★右側の全体の高さと同じ数値を指定 */
+    margin-left: 10px;
     object-fit: cover;  /* ★これが重要！画像を歪ませずに枠いっぱいに収めます */
     border-radius: 10px; /* 角を丸くすると柔らかい印象になります */
 }
-
+p.end {
+  clear: both;
+}
 .sec_07_text h3 {
   padding-bottom: 10%;
 }
