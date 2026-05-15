@@ -13,17 +13,16 @@ html {
 /* body
 ------------------------------*/
 body {
-  background-color: #ccc;
-}
+  background-color: background: linear-gradient(to bottom, #ffffff, #e6f2f5);
 
 /* wrapper
 ------------------------------*/
 .wrapper {
-  max-width: 1920px;
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  /* 画面幅1920pxまでは横幅100％表示、1920px(主流モニターサイズFull-HD)以上には広がらず、余った間隔を左右均等につけて.wrapperを中央に配置 */
-  background-color: #fff;
+  /* 画面幅1500pxまでは横幅100％表示、1500px(主流モニターサイズFull-HD)以上には広がらず、余った間隔を左右均等につけて.wrapperを中央に配置 */
+  background-color: #ebf6f7;
 }
 
 /* header
@@ -78,7 +77,7 @@ nav ul li {
 nav ul li a {
   display: block;
   /* マウスホバーできる範囲を文字だけでなく、背景部分にも適応させるためにブロックレベル要素に変更 */
-  color: #333;
+  color: #004bb1;
   font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
@@ -109,6 +108,7 @@ section {
 
 h2 {
   font-size: 4.8rem;
+  color: #005b7f;
   margin-bottom: 80px;
   text-align: center;
 }
@@ -129,7 +129,7 @@ p {
   padding: 5%;
   margin-bottom: 5%;
   border-radius: 6px;
-  background-color: #ccc;
+  background-color: #f9f5f0;
 }
 
 .sec_05_item:last-child {
@@ -219,31 +219,60 @@ div.sec_06_container {
 }
 
 .sec_07_text h3 {
+  font-size: 25px;
   padding-bottom: 10%;
 }
 
+.text_with_img {
+    display: flex;       /* 横並びにする */
+    align-items: center; /* 「中央揃え」にすると、見出しと高さが合いやすくなります */
+    gap: 20px;           /* 画像とテキストの間の隙間 */
+}
+
+.left_side_img {
+    width: 40%;          /* テキストエリア内での画像の幅 */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.text_inner {
+    flex: 1;             /* 残りの幅をすべてテキストが使う */
+}
+
 .sec_07_image {
-  width: 50%;
-  margin-left: 2%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  padding-bottom: -3%;
+    width: 50%;
+    height: 500px;           /* 左側のメイン画像と高さを合わせる */
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;         /* 折り返しを許可する */
+    justify-content: space-between; /* 左右に振り分ける */
+    align-content: space-between;   /* 上下に振り分ける */
 }
+
 .sec_07_image img {
-  width: 30%;
-  height: auto;
-  padding-bottom: 3%;
-  filter:brightness(50%);
-  transition-duration: 0.4s;
+    width: 48%;              /* ★ここを「48%」にすると2枚ずつ並ぶ */
+    height: 245px;           /* ★高さを指定して object-fit を使うと綺麗 */
+    object-fit: cover;       /* 画像が歪まないように切り抜く */
+    filter: brightness(50%);
+    transition-duration: 0.4s;
 }
+
 
 .sec_07_image img:hover {
   filter:brightness(100%)
 }
 
+
 /* footer
+------------------------------*/
+footer {
+  background-color: #ebf6f7;
+
+  color: #004bb1;
+}
+
+.ft/* footer
 ------------------------------*/
 footer {
   background-color: #777;
