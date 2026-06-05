@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><title>CLEAR PULSE（クリア・パルス）| 思考を再起動する強炭酸紅茶</title><!--ここはページのタイトル-->
+  <title>CLEAR PULSE（クリア・パルス）| 思考を再起動する強炭酸紅茶</title>
   <meta name="author" content="akeminiwa">
   <meta name="description" content="思考を再起動する、紅茶専門店の強炭酸フレーバーティー「CLEAR PULSE（クリア・パルス）」。研ぎ澄まされた茶葉の香りと強炭酸の刺激が、あなたのパフォーマンスを整える。洗練された新しいティー体験をお届けします。">
-  <link rel="ico" href="favicon.png">
+  <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,46 +18,49 @@
   <div class="wrapper">
 
     <header>
-      <h1><a href="#"><img src="images/drop_1.png"></a></h1>
+      <h1><a href="#"><img src="images/drop_1.png" alt="CLEAR PULSE"></a></h1>
       <nav>
         <ul>
-          <li><a href="#">私たちについて</a></li>
-          <li><a href="#">会社概要</a></li>
-          <li><a href="#">お知らせ</a></li>
-          <li><a href="#">採用サイト</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#about">商品について</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="#news">お知らせ</a></li>
+          <li><a href="#recruit">採用サイト</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
     </header>
 
-    <figure class="main-visual">
-      <img src="./images/carbonated image_4.jpg" width="2400" height="1080" alt="画像：メインビジュアルサンプル">
-    </figure>
+    <div class="main_visual_slider">
+      <img src="images/carbonated image_4.jpg" alt="CLEAR PULSE 思考・再起動" class="slide_img active">
+      <img src="images/profile_2.jpg" alt="優しく自然光が当たっている横顔" class="slide_img">
+      <img src="images/clean.jpg" alt="爽やかなお茶のイメージ" class="slide_img">
+    </div>
 
     <main>
-      <section class="sec_05">
+      <!-- 商品について -->
+      <section id="about" class="sec_05">
         <h2>商品について</h2>
 
-        <section class="sec_05_item">
+        <div class="sec_05_item">
           <h3><span class="heading_sub">1</span>抽出技術</h3>
           <figure><img src="images/section_1_1.jpg" width="768" height="768" alt="画像：茶葉/カップ"></figure>
           <p>Clear Pulseのベースとなるお茶は、低温でじっくりと時間をかけて抽出しています。<br>これにより、雑味のないクリアな味わいと、ふくよかな香りを実現しました。<br>炭酸を加えることで、その香りが鼻を抜け、心地よい余韻が広がります。<br>お湯を注いだ瞬間、茶葉が豊かに花開く。<br>そこに独自の製法で閉じ込めた繊細な炭酸が加わることで、日常に新しいリズムを生み出します。<br>一口飲めば、心まで透き通るような清涼感を体験してください。</p>
-        </section>
+        </div>
 
-        <section class="sec_05_item">
+        <div class="sec_05_item">
           <h3><span class="heading_sub">2</span>飲み心地</h3>
           <figure><img src="images/section_2_2.jpg" width="768" height="768" alt="画像：紅茶炭酸"></figure>
           <p>カロリーを控えめに、甘さも最小限に。<br>毎日のリフレッシュタイムはもちろん、お食事との相性も抜群です。<br>クリアなボトルの中で弾ける炭酸の泡は、あなたの日常を少しだけ特別なものへと変えてくれます。<br>私たちが選んだのは、こだわり抜いた国産茶葉と、自然由来の果実エキス。<br>素材本来の芳醇な香りを損なうことなく、炭酸の刺激と絶妙なバランスで調和させました。<br>後味のキレの良さに、きっと驚かれるはずです。</p>
-        </section>
-
+        </div>
       </section>
 
+      <!-- ランキング -->
       <section class="sec_06">
         <h2>Ranking</h2>
         <div class="sec_06_container">
           <figure class="sec_06_item">
             <img src="./images/section_1_2.jpg" width="768" height="768" alt="画像：サンプルイメージ">
-            <figcaption> SPARKING TEA<p>強炭酸紅茶 / 173円</figcaption>
+            <figcaption>SPARKING TEA<br>強炭酸紅茶 / 173円</figcaption>
           </figure>
 
           <figure class="sec_06_item">
@@ -73,52 +76,88 @@
           <figure class="sec_06_item">
             <img src="./images/flavored ea_2.jpg" width="768" height="768" alt="画像：サンプルイメージ">
             <figcaption>PULSE -O.F.<br>オレンジ / 160円</figcaption>
-          </figure>          
-</div>     
+          </figure>
         </div>
       </section>
 
- <section class="sec_07">
-        <h2>おすすめの特集</h2>
+      <!-- 私たちについて -->
+      <section class="sec_07">
+        <h2>私たちについて</h2>
         <div class="sec_07_container">
+          <div class="sec_07_text">
+            <div class="text_with_img">
+              <div class="text_inner">
+                <h3>日常に、クリアな余白と、新しい鼓動を。</h3>
+                <p>私たちは、ただ美味しい紅茶をお届けするだけのブランドではありません。<br>目まぐるしく変化する現代において、思考を張り巡らせ、挑戦を続ける人たちの「心と頭を調和させる存在」でありたいと考えています。<br>大切な人へ彩りを贈るギフトコレクションや、旬の香りと出会うイベント特集。<br>さらには、茶園の未来を支える基金活動から、ビジネスの思考を整える法人向けサービスまで。<br>一口飲めば思考がクリアに整い、次の一歩を踏み出すための心地よい鼓動（パルス）が体中を巡る<br>Clear Pulseは、あなたのパフォーマンスに寄り添う、上質なリフレッシュをデザインします。</p>
+              </div>
+            </div>
+          </div>
 
-  <div class="sec_07_text">
-    <div class="text_with_img">
-        
-        
-        <div class="text_inner">
-            <h3>ギフトからオフィスまで。一杯のパルスが広がる、<br>特別な体験。</h3>
-            <p>大切な人へ彩りを贈るギフトコレクションや、旬の香りと出会うイベント特集。<br>さらには、茶園の未来を支える基金活動から、ビジネスの思考を整える法人向け<br>サービスまで。<br>
-            Clear Pulseは、あらゆるシーンに「究極の紅茶体験」をお届けします。</p>
-        </div>
-    </div>
-</div>
-          
           <figure class="sec_07_image">
             <img src="images/giftcollection_2.jpg" alt="ギフトコレクション">
             <img src="images/event_2.jpg" alt="イベント特集">
             <img src="images/fundactivities.jpg" alt="基金活動">
             <img src="images/corporateclients_3.jpg" alt="法人のお客様">
-         </figure>
-            
+          </figure>
         </div>
       </section>
 
+      <!-- ニュース -->
+      <section class="sec_news_slider" id="news">
+        <h2>News</h2>
+        <div class="slider_wrapper">
+          <button class="slide_arrow prev_btn">&lt;</button>
+
+          <div class="news_carousel">
+            <article class="news_card">
+              <figure><img src="images/melon_herbs.jpg" alt="メロンパフェ"></figure>
+              <div class="card_txt">
+                <p class="date_cat">2026.05.20 | ニュース</p>
+                <p class="brand_name">Clear Pulse</p>
+                <h3>初夏を彩る「PULSE - M.L.（メロン＆レモングラス）」が新登場！爽やかな果実味と強炭酸の刺激。</h3>
+              </div>
+            </article>
+
+            <article class="news_card">
+              <figure><img src="images/coworking.jpg" alt="ミルクレープ"></figure>
+              <div class="card_txt">
+                <p class="date_cat">2026.05.13 | ニュース</p>
+                <p class="brand_name">Clear Pulse</p>
+                <h3>コワーキングスペース「Share&Think」全店にて、働くビジネスパーソンのためのリフレッシュドリンクとして導入決定！</h3>
+              </div>
+            </article>
+
+            <article class="news_card">
+              <figure><img src="images/gift_1.jpg" alt="メロンスイーツ"></figure>
+              <div class="card_txt">
+                <p class="date_cat">2026.05.12 | ニュース</p>
+                <p class="brand_name">Clear Pulse</p>
+                <h3>特別なギフトや大切な人へ。五感を整える「Clear Pulse プレミアムギフトコレクション」予約受付開始。</h3>
+              </div>
+            </article>
+          </div>
+
+          <button class="slide_arrow next_btn">&gt;</button>
+        </div>
+      </section>
     </main>
 
+    <div class="pagetop_btn">
+      <a href="#">↑</a>
+    </div>
 
     <footer>
       <div class="ft_content">
-        <h2><a href="#"><img src="images/drop_1.png"></a></h2>
+        <h2><a href="#"><img src="images/drop_1.png" alt="CLEAR PULSE"></a></h2>
         <div class="ft_list_wrap">
           <ul>
-            <li><a href="#">私たちについて</a></li>
-            <li><a href="#">会社概要</a></li>
-            <li><a href="#">お知らせ</a></li>
+            <li><a href="#about">商品について</a></li>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="#news">お知らせ</a></li>
           </ul>
           <ul>
-            <li><a href="#">採用サイト</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#recruit">採用サイト</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
         </div>
       </div>
@@ -126,8 +165,11 @@
       <small>2026 &copy; sample site.</small>
     </footer>
 
-  </div><!--/wrapper-->
+  </div>
 
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
