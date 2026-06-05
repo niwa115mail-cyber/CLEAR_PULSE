@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* typeB-1column css */
-/* リセットCSSでボーダーボックスの設定をしています。 */
+/* リセットCSSでボーダーボックスの設定をしている。 */
 
 /* html
 ------------------------------*/
@@ -13,41 +13,32 @@ html {
 /* body
 ------------------------------*/
 body {
-  background-color: background: linear-gradient(to bottom, #ffffff, #e6f2f5);
+ background: linear-gradient(-162deg, rgba(238,243,247,0.9813084112149533) 0%, rgba(149,160,172,1)100%);
+}
 
 /* wrapper
 ------------------------------*/
 .wrapper {
-  max-width: 1500px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  /* 画面幅1500pxまでは横幅100％表示、1500px(主流モニターサイズFull-HD)以上には広がらず、余った間隔を左右均等につけて.wrapperを中央に配置 */
-  background-color: #ebf6f7;
+  background-color: #f8f8ff;
 }
 
 /* header
 ------------------------------*/
 header {
   background-color: rgba(255, 255, 255, 0.9);
-  /* 白(不透明度90％) */
   position: sticky;
-  /* スクロールしてもheaderが固定 */
   top: 0;
-  /* 固定の位置(ブラウザの一番上) */
   z-index: 9999;
-  /* 固定したheaderを最前面に */
   display: flex;
-  /* この要素の中の直接の子要素(※widthを設定する必要あり)を横並び */
   justify-content: space-between;
-  /* 直接の子要素の横方向の並び方：左右両端揃え均等配置 */
   align-items: center;
-  /* 直接の子要素の縦方向の並び方：中央揃え */
-
 }
 
 header h1 {
   width: 50%;
-  /* 親要素headerの横幅の50％の横幅 */
   padding-left: 30px;
   font-size: 4.8rem;
 }
@@ -60,7 +51,6 @@ h1 a {
 ------------------------------*/
 nav {
   width: 50%;
-  /* 親要素headerの横幅の50％の横幅 */
 }
 
 nav ul {
@@ -71,19 +61,15 @@ nav ul {
 
 nav ul li {
   width: calc(100% / 5);
-  /* 親要素ulの横幅100%に対しliの数で割るとそれぞれのliが均等の横幅になる */
 }
 
 nav ul li a {
   display: block;
-  /* マウスホバーできる範囲を文字だけでなく、背景部分にも適応させるためにブロックレベル要素に変更 */
-  color: #004bb1;
+  color: #4a5568;
   font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
-  /* ブロックレベル化したaのボックスの中の文字を中央揃え */
   transition-duration: 0.5s;
-  /* ↓ホバーした時のスタイルに0.5秒かけて変化 */
 }
 
 nav ul li a:hover {
@@ -94,11 +80,8 @@ nav ul li a:hover {
 ------------------------------*/
 .main-visual img {
   width: 100%;
-  /* 囲んでいる親要素と同じ幅 */
   height: auto;
-  /* 縦横比を保ったまま横幅に合わせる */
 }
-
 
 /* section全体
 ------------------------------*/
@@ -108,7 +91,7 @@ section {
 
 h2 {
   font-size: 4.8rem;
-  color: #005b7f;
+  color: #4a5568;
   margin-bottom: 80px;
   text-align: center;
 }
@@ -118,10 +101,10 @@ h3 {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
-/* section05
+/* section05（商品について）
 ------------------------------*/
 .sec_05_item {
   display: flex;
@@ -129,7 +112,8 @@ p {
   padding: 5%;
   margin-bottom: 5%;
   border-radius: 6px;
-  background-color: #f9f5f0;
+  border: 1.5px solid #ccc;
+  background-color: #ffffff;
 }
 
 .sec_05_item:last-child {
@@ -138,6 +122,7 @@ p {
 
 .sec_05_item h3 {
   width: 60px;
+  color: #4a5568;
   writing-mode: vertical-lr;
   white-space: nowrap
 }
@@ -151,7 +136,7 @@ p {
   border-radius: 100vh;
   margin-bottom: 2%;
   writing-mode: horizontal-tb;
-  background-color: #333;
+  background-color: #4a5568;
   color: #fff;
 }
 
@@ -167,9 +152,12 @@ p {
 
 .sec_05_item p {
   width: 60%;
+  font-size: 1.4rem !important;   
+  line-height: 2.2 !important;    
+  color: #4a5568 !important;      
 }
 
-/* section06
+/* section06（Ranking）
 ------------------------------*/
 section.sec_06 {
   background-color: #eee;
@@ -181,6 +169,7 @@ div.sec_06_container {
   background-color: #fff;
   padding: 3% 0;
   border-radius: 6px;
+  border: 1.5px solid #ccc;
 }
 
 .sec_06_item {
@@ -200,107 +189,358 @@ div.sec_06_container {
 }
 
 .sec_06_item figcaption {
-  font-size: 1.6rem;
-
+  font-size: 1.4rem;
+  color: #4a5568;
 }
 
-/* section07
+/* section07（私たちについて - ABOUT）
 ------------------------------*/
 .sec_07_container {
   display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* 左右の箱の全体の高さをキッチリ揃える */
 }
 
 .sec_07_text {
-  width: 50%;
-  margin-right: 2%;
-  background-color: #ccc;
-  padding: 2%;
+  width: 47%; 
+  background-color: #ffffff;
+  padding: 40px 30px; 
   border-radius: 6px;
+  box-sizing: border-box;
+  border: 1.5px solid #ccc;
+  margin-right: 3%; 
+  
+  /* 中の文章を縦方向に配置 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  height: auto !important; /* 文字量に応じて箱が自然に伸びるようにする */
 }
 
 .sec_07_text h3 {
-  font-size: 25px;
-  padding-bottom: 10%;
+  font-size: 24px; 
+  padding-bottom: 20px;
+  margin: 0;
+  font-weight: bold;
+  color: #4a5568;
 }
 
-.text_with_img {
-    display: flex;       /* 横並びにする */
-    align-items: center; /* 「中央揃え」にすると、見出しと高さが合いやすくなります */
-    gap: 20px;           /* 画像とテキストの間の隙間 */
+.text_inner p {
+  font-size: 1.4rem !important;    
+  line-height: 1.6 !important; /* 行間を1.8にして、枠内に美しく収める */
+  color: #4a5568 !important;
+  margin: 0;
 }
 
-.left_side_img {
-    width: 40%;          /* テキストエリア内での画像の幅 */
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-.text_inner {
-    flex: 1;             /* 残りの幅をすべてテキストが使う */
-}
-
+/* ★4枚のタイル画像の設定 */
 .sec_07_image {
-    width: 50%;
-    height: 500px;           /* 左側のメイン画像と高さを合わせる */
-    margin-left: 2%;
-    display: flex;
-    flex-wrap: wrap;         /* 折り返しを許可する */
-    justify-content: space-between; /* 左右に振り分ける */
-    align-content: space-between;   /* 上下に振り分ける */
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 1fr);    
+  gap: 15px;        
+  width: 47%; /* 線が入るため、画像側も48%から47%に調整して左右のバランスをとる */
+  margin: 0;        
 }
 
+/* 👇 すべての画像の大きさを完全に統一する */
 .sec_07_image img {
-    width: 48%;              /* ★ここを「48%」にすると2枚ずつ並ぶ */
-    height: 245px;           /* ★高さを指定して object-fit を使うと綺麗 */
-    object-fit: cover;       /* 画像が歪まないように切り抜く */
-    filter: brightness(50%);
-    transition-duration: 0.4s;
+  width: 100% !important;
+  height: 100% !important;      /* グリッドで均等に割られたセルの高さに100%合わせる */
+  object-fit: cover !important; /* 元の画像比率が違っても、自動的にトリミングしてサイズを統一 */
+  border-radius: 6px;
+  filter: brightness(50%);
+  transition: transform 0.3s, filter 0.3s, opacity 0.3s;
 }
-
 
 .sec_07_image img:hover {
-  filter:brightness(100%)
+  filter: brightness(100%);
+  transform: scale(1.02);
+}
+/* ==========================================
+   会社概要（COMPANY）のレイアウト調整
+============================================ */
+.sec_company {
+    background-color: #ffffff; 
+    padding: 100px 20px;
+    text-align: center;
 }
 
-
-/* footer
-------------------------------*/
-footer {
-  background-color: #ebf6f7;
-
-  color: #004bb1;
+.sec_company h2 {
+    font-size: 4.8rem;
+    color: #1e3a5f;
+    margin-bottom: 60px;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 10px 100px; /* 左右に葉っぱ用の空き地 */
+    position: relative;
 }
 
-.ft/* footer
-------------------------------*/
-footer {
-  background-color: #777;
+/* 会社概要の見出し「だけ」に限定して葉っぱを再配置 */
+.sec_company h2::before,
+.sec_company h2::after {
+    content: '🍃' !important; 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;       
+    opacity: 0.8;
+}
 
-  color: #fff;
+.sec_company h2::before {
+    left: 0;
+}
+
+.sec_company h2::after {
+    right: 0;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+.company_container {
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.company_table {
+    width: 100%;
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+.company_table tr {
+    border-bottom: 1.5px solid #e2e8f0; 
+}
+
+.company_table th {
+    width: 25%; 
+    padding: 24px 10px;
+    font-size: 2rem;
+    color: #1e3a5f;
+    font-weight: bold;
+    vertical-align: top; 
+}
+
+.company_table td {
+    width: 75%;
+    padding: 24px 10px;
+    font-size: 1.6rem;
+    color: #4a5568; 
+    line-height: 1.8;
+    vertical-align: top;
+}
+
+.company_table tr:last-of-type {
+    border-bottom: none;
+}
+
+/* ==========================================
+   お問い合わせ（CONTACT）のレイアウト調整
+============================================ */
+#contact {
+    padding: 100px 20px !important;
+    height: auto !important;         
+    position: relative !important;
+    clear: both !important;          
+    background-color: #f7fafc; 
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 4.8rem;
+    color: #1e3a5f;
+    margin-bottom: 60px;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 0; 
+}
+
+#contact form {
+    max-width: 800px !important;
+    margin: 0 auto 50px auto !important; 
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.05); 
+    height: auto !important;         
+    overflow: hidden !important;     
+}
+
+#contact table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#contact table tr {
+    border-bottom: 1.5px solid #e2e8f0; 
+}
+
+#contact table tr:last-of-type {
+    border-bottom: none; 
+}
+
+#contact th {
+    width: 30%; 
+    padding: 25px 20px;
+    font-size: 1.5rem;
+    color: #1e3a5f;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: top; 
+}
+
+#contact td {
+    width: 70%;
+    padding: 20px 15px;
+    text-align: left;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact select,
+#contact textarea {
+    width: 100%; 
+    padding: 12px 15px;
+    border: 1.5px solid #e2e8f0; 
+    border-radius: 6px;
+    font-size: 1.6rem;
+    color: #4a5568;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; 
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+    outline: none;
+    border-color: #aab7c4; 
+    box-shadow: 0 0 0 3px rgba(170, 183, 196, 0.1); 
+}
+
+#contact textarea {
+    height: 150px;
+    resize: vertical; 
+}
+
+#contact input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#contact td label {
+    font-size: 1.6rem;
+    color: #4a5568;
+    margin-right: 20px; 
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#contact td.send {
+    text-align: center; 
+    padding-top: 50px;
+    border: none; 
+}
+
+#contact input[type="submit"],
+#contact input[type="reset"] {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin: 0 10px;
+}
+
+#contact input[type="submit"] {
+    background-color: #778899; 
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(30, 58, 95, 0.2);
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #152942; 
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
+}
+
+#contact input[type="reset"] {
+    background-color: #ffffff; 
+    color: #4a5568;
+}
+
+#contact input[type="reset"]:hover {
+    background-color: #cbd5e0; 
+}
+
+#contact input[type="submit"]:active,
+#contact input[type="reset"]:active {
+    transform: translateY(1px);
+}
+
+/* ------------------------------------------
+   【安全策】不要な擬似要素のグローバルリセット
+-------------------------------------------- */
+::before,
+::after,
+header nav ul li::before,
+header nav ul li::after,
+.company_table th::before,
+.company_table th::after,
+.company_table td::before,
+.company_table td::after,
+h2::before,
+h2::after {
+    content: none;
+}
+
+/* 会社概要の葉っぱだけ特別に再適用 */
+.sec_company h2::before,
+.sec_company h2::after {
+    content: '🍃' !important;
+}
+
+/* ==========================================
+   footer（すっきり1箇所に集約＆調整）
+============================================ */
+footer, #footer {
+    position: relative !important;
+    clear: both !important;          
+    z-index: 10 !important;
+    width: 100% !important;
+    max-width: 100% !important; /* 横幅いっぱいに色を敷く */
+    background-color: #6c7e90 !important; /* 上の広いエリアのブルーグレー */
+    margin: 0 auto !important;
+    padding: 60px 0 0 0 !important; /* 下のコピーライト帯と密着させる */
+    box-sizing: border-box !important;
 }
 
 .ft_content {
   display: flex;
   justify-content: space-between;
-  padding: 5% 10%;
+  align-items: center; 
+  max-width: 1000px;  /* フッターの中身をキュッと中央に寄せる設定 */
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  box-sizing: border-box;
 }
 
 footer h2 {
   text-align: left;
-  width: 50%;
+  width: 250px; 
   margin-bottom: 0;
 }
 
 footer .ft_list_wrap {
-  width: 30%;
+  width: auto;          
   display: flex;
-  justify-content: space-between;
+  gap: 60px;            
 }
 
 .ft_list_wrap ul {
   width: fit-content;
-  /* 横幅を内容物ぴったりに合わせる */
 }
 
 .ft_list_wrap ul li {
@@ -318,9 +558,252 @@ footer .ft_list_wrap {
   color: #111;
 }
 
-small {
-  display: block;
-  text-align: center;
-  font-size: 1.4rem;
-  padding: 2%;
+/* フッター内の文字色を「すべて純白」に統一 */
+footer h3, 
+footer address, 
+footer span,
+footer a,
+footer li {
+    color: #ffffff !important; 
+    text-decoration: none !important;
+    opacity: 1 !important;
+}
+
+footer a:hover {
+    opacity: 0.7 !important;
+}
+
+/* 一番下のコピーライトエリア（2色目の細い帯） */
+footer small {
+    display: block !important;
+    width: 100% !important;
+    background-color: #526273 !important; /* 一番下の引き締めダークブルー */
+    color: #ffffff !important;           
+    text-align: center !important;
+    padding: 15px 0 !important;          
+    margin: 0 !important;
+    font-size: 1.4rem;
+}
+
+/* フッター内の擬似要素を完全消去 */
+footer ::before,
+footer ::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* ==========================================
+   トップ画面 スライドショー用スタイル
+============================================ */
+div.main_visual_slider {
+    position: relative !important;
+    width: 100% !important;
+    height: 600px !important; 
+    overflow: hidden !important;
+    background-color: #000 !important;
+}
+
+div.main_visual_slider img.slide_img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0 !important;
+    z-index: 1 !important;
+    transition: opacity 2.0s ease-in-out !important;
+}
+
+div.main_visual_slider img.slide_img.active {
+    opacity: 1 !important;
+    z-index: 10 !important; 
+}
+
+/* ==========================================
+   ページ上部へ戻るボタンの固定位置設定
+============================================ */
+.pagetop_btn {
+    position: fixed !important; 
+    bottom: 30px !important;    
+    right: 30px !important;     
+    z-index: 100 !important;    
+}
+
+.pagetop_btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #526273; 
+    color: #ffffff !important; /* 常に白文字 */
+    text-decoration: none;
+    border-radius: 50%;       
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+}
+
+.pagetop_btn a:hover {
+    background-color: #6c7e90; 
+    transform: translateY(-3px); 
+}
+
+/* ==========================================
+   News スライダーデザイン
+============================================ */
+.sec_news_slider {
+    background-color: #f8f8ff; 
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sec_news_slider h2 {
+    font-size: 4.8rem;
+    color: #4a5568; 
+    margin-bottom: 40px;
+}
+
+.slider_wrapper {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 60px; 
+}
+
+.news_carousel {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news_card {
+    width: calc(100% / 3);
+    background-color: #ffffff;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1.5px solid #ccc;
+}
+
+.news_card figure {
+    width: 100%;
+    margin: 0;
+    aspect-ratio: 4 / 3; 
+    overflow: hidden;
+}
+
+.news_card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_txt {
+    padding: 20px;
+}
+
+.date_cat {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 5px;
+}
+
+.brand_name {
+    font-size: 1.0rem;
+    color: #4a5568;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.news_card h3 {
+    font-size: 1.3rem;
+    color: #4a5568;
+    line-height: 1.6;
+    font-weight: normal;
+}
+
+.slide_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1.5px solid #ccc;
+    background-color: transparent;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.slide_arrow:hover {
+    background-color: #6c7e90;
+    color: #ffffff;
+}
+
+.prev_btn { left: 0; }
+.next_btn { right: 0; }
+
+/* ==========================================
+   商品について（特徴）セクションの背景を白にする
+============================================ */
+#products,
+#features,
+.sec_products,
+.sec_features,
+section[class*="product"],
+section[class*="feature"] {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   メディアクエリ（レスポンシブ対応）
+   ========================================================================== */
+@media screen and (max-width: 1024px) {
+    .sec_inquiry table,
+    .sec_company .company_table {
+        width: 90%; 
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec_company h2,
+    .sec_inquiry h2 {
+        font-size: 2.4rem !important; 
+        padding: 0 35px;             
+    }
+
+    .sec_company .company_table th,
+    .sec_company .company_table td {
+        display: block; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sec_company .company_table th {
+        background-color: #edf5f9; 
+        padding-bottom: 10px;
+    }
+
+    .sec_inquiry table tr {
+        display: flex;
+        flex-direction: column; 
+    }
+    .sec_inquiry table th,
+    .sec_inquiry table td {
+        display: block;
+        width: 100% !important;
+    }
+    .sec_inquiry input[type="text"],
+    .sec_inquiry textarea {
+        width: 100% !important; 
+    }
 }
